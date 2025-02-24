@@ -1,0 +1,75 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 导航栏 */
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    display: flex;
+    justify-content: space-around; /* 让元素均匀分布 */
+    padding: 10px 0;
+  }
+  
+  .nav-item {
+    flex: 1; /* 让每个项平均分配空间 */
+    text-align: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* 主内容布局 */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  /* 推荐曲目 & 音乐爱好者 */
+  .recommended, .music-lovers {
+    width: 45%;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  h3 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dashboard-header {
+    background: #333;
+    color: white;
+    text-align: left; /* 让标题靠左 */
+    padding: 15px 20px; /* 调整内边距 */
+    font-size: 20px;
+  }
+  
+  

@@ -1,0 +1,141 @@
+/* Custom player style */
+.midi-player-wrapper {
+    display: block;
+    width: 100%;
+    margin: 4px;
+    margin-bottom: 0;
+  }
+  
+  .midi-player-wrapper .midi-player {
+    display: block;
+    width: 100%;
+    margin: 4px;
+    margin-bottom: 0;
+  }
+  
+  .midi-player-wrapper .midi-player::part(control-panel) {
+    background: #ff5;
+    border: 2px solid #000;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .midi-player-wrapper .midi-player::part(play-button) {
+    color: #353;
+    border: 2px solid currentColor;
+    background-color: #4d4;
+    border-radius: 20px;
+    transition: all 0.2s;
+    content: 'Play';
+  }
+  
+  .midi-player-wrapper .midi-player::part(play-button):hover {
+    color: #0a0;
+    background-color: #5f5;
+    border-radius: 10px;
+  }
+  
+  .midi-player-wrapper .midi-player::part(time) {
+    font-family: monospace;
+    color: #333;
+  }
+  
+  /* Custom visualizer style */
+  .midi-visualizer-wrapper .piano-roll-visualizer {
+    background: #ffd;
+    border: 2px solid black;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    margin: 4px;
+    margin-top: 0;
+    overflow: auto;
+  }
+  
+  .midi-visualizer-wrapper svg rect.note {
+    opacity: 0.6;
+    stroke-width: 2;
+    transition: opacity 0.2s, stroke 0.2s;
+  }
+  
+  .midi-visualizer-wrapper svg rect.note[data-instrument="0"] {
+    fill: #e22; /* Red color for instrument 0 */
+    stroke: #500;
+  }
+  
+  .midi-visualizer-wrapper svg rect.note[data-instrument="2"] {
+    fill: #2ee; /* Blue color for instrument 2 */
+    stroke: #055;
+  }
+  
+  .midi-visualizer-wrapper svg rect.note[data-is-drum="true"] {
+    fill: #888; /* Gray color for drums */
+    stroke: #888;
+  }
+  
+  .midi-visualizer-wrapper svg rect.note.active {
+    opacity: 0.9;
+    stroke: #000;
+  }
+  
+  /* Hover effects for notes */
+  .midi-visualizer-wrapper svg rect.note:hover {
+    opacity: 1;
+    stroke: #000;
+    stroke-width: 3;
+    cursor: pointer;
+  }
+  
+  /* Active note (when playing) */
+  .midi-visualizer-wrapper svg rect.note.active {
+    fill: #ff6347; /* Tomato color for active notes */
+    stroke: #000;
+  }
+  
+  /* Styling the piano keys */
+  .midi-visualizer-wrapper .piano-roll-visualizer .piano-key {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    width: 20px;
+    height: 100%;
+  }
+  
+  .midi-visualizer-wrapper .piano-roll-visualizer .piano-key.active {
+    background-color: #ff6347; /* Highlight active piano key */
+  }
+  
+  /* Add some padding to the player container */
+  .midi-player-wrapper {
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling the file input */
+  .file-input label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .file-input input[type="file"] {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Title and general layout */
+  h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container .file-input {
+    margin-bottom: 20px;
+  }
+  
